@@ -918,5 +918,98 @@ d-appendix a:hover, d-appendix a.footnote-backlink:hover {
     grid-column: none;
   }
 }
+.logo {
+  float: left;
+  margin-right: 20px;
+  padding-bottom: 15px;
+  width: 120px;
+  height: 120px;
+}
+
+.about .post-title {
+  padding-top: 20px;
+}
+.about .post-description {
+  font-size: 20px;
+}
+
+.instructors {
+  padding: 0 0 0 1%;
+}
+
+.instructor-profile-three-col, .instructor-profile-two-col {
+  display: block;
+  float: left;
+  height: 210px;
+}
+@media screen and (min-width: 676px) {
+  .instructor-profile-three-col, .instructor-profile-two-col {
+    height: 130px;
+  }
+}
+.instructor-profile-three-col img, .instructor-profile-two-col img {
+  border-radius: 50%;
+  float: left;
+  object-fit: cover;
+  height: 100px;
+  width: 100px;
+  margin-right: 10px;
+}
+.instructor-profile-three-col ul.instructor-info, .instructor-profile-two-col ul.instructor-info {
+  display: block;
+  float: left;
+  list-style-type: none;
+  padding-left: 0;
+  width: 65%;
+  width: -webkit-calc(100% - 130px);
+  width: calc(100% - 130px);
+  min-width: 210px;
+}
+.instructor-profile-three-col ul.instructor-info a, .instructor-profile-two-col ul.instructor-info a {
+  color: --global-theme-color;
+}
+.instructor-profile-three-col ul.instructor-info a:hover, .instructor-profile-two-col ul.instructor-info a:hover {
+  text-decoration: underline;
+}
+.instructor-profile-three-col ul.instructor-info span, .instructor-profile-two-col ul.instructor-info span {
+  font-weight: 400;
+}
+
+.instructor-profile-two-col {
+  width: 50%;
+}
+
+.instructor-profile-three-col {
+  width: 33%;
+}
+
+.news {
+  border-top: 1px solid #e8e8e8;
+  margin-top: 30px;
+  padding-top: 20px;
+}
+.news h2 {
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.news table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.news table .date {
+  width: 19%;
+}
+.news table .announcement {
+  width: 81%;
+}
+.news table tr {
+  text-align: left;
+}
+.news table td {
+  padding: 6px 0;
+  vertical-align: top;
+  border: none;
+}
 
 /*# sourceMappingURL=main.css.map */
