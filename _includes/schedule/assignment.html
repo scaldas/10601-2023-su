@@ -1,0 +1,25 @@
+<h3 class="card-title font-weight-medium">{{ entry.title }}</h3>
+<h5 class="card-title font-weight-medium">Due Date: <b>{{ entry.due_date }}</b></h5>
+<div>
+    <table class="table table-sm table-borderless table-responsive">
+
+        <tr>
+          <td class="p-1 pr-2 font-weight-bold"><b>Release Date:</b></td>
+          <td class="p-1 pl-2 font-weight-light text">{{ entry.release_date }}</td>
+        </tr>
+        {%- if entry.files -%} 
+          {% for file in entry.files %}
+          <tr>
+            <td class="p-1 pr-2 font-weight-bold">{%- if forloop.index == 1 -%} <b>Files: {%- endif -%}</b></td>
+            {%- if file.local_link -%}
+            <td class="p-1 pl-2 font-weight-light text"><a href="{{ file.local_link | prepend: '/assets/pdf/lectures/' | relative_url }}" target="_blank">{{ file.name }}</a></td>
+            {%- elsif file.external_link -%}
+            <td class="p-1 pl-2 font-weight-light text"><a href="{{ file.external_link }}" target="_blank">{{ file.name }}</a></td>
+            {%- else -%}
+            <td class="p-1 pl-2 font-weight-light text">{{ file.name }}</td>
+            {%- endif -%}
+          </tr>
+          {% endfor %}
+        {%- endif -%}
+        </table>    
+</div>

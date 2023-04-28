@@ -1,0 +1,30 @@
+<h3 class="card-title font-weight-medium">{{ entry.title }}</h3>
+<div>
+  <table class="table table-sm table-borderless table-responsive">
+    <tr>
+      <td class="p-1 pr-2 font-weight-bold"><b>Date:</b></td>
+      <td class="p-1 pl-2 font-weight-light text">{{ entry.date }}</td>
+    </tr>
+    {%- if entry.slides -%}
+    <tr>
+      <td class="p-1 pr-2 font-weight-bold"><b>Slides:</b></td>
+      <td class="p-1 pl-2 font-weight-light text"><a href="{{ entry.slides | prepend: '/assets/pdf/lectures/' | relative_url }}" target="_blank">{{ entry.slides }}</a> {%- if entry.inked -%}&nbsp; (<a href="{{ entry.inked | prepend: '/assets/pdf/lectures/' | relative_url }}" target="_blank">Inked</a>) {%- endif -%}</td>  
+    </tr>
+    {%- endif -%}
+    
+    {%- if entry.resources -%} 
+      {% for resource in entry.resources %}
+      <tr>
+        <td class="p-1 pr-2 font-weight-bold">{%- if forloop.index == 1 -%} <b>Resources: {%- endif -%}</b></td>
+        {%- if resource.local_link -%}
+        <td class="p-1 pl-2 font-weight-light text"><a href="{{ resource.local_link | prepend: '/assets/pdf/lectures/' | relative_url }}" target="_blank">{{ resource.name }}</a></td>
+        {%- elsif resource.external_link -%}
+        <td class="p-1 pl-2 font-weight-light text"><a href="{{ resource.external_link }}" target="_blank">{{ resource.name }}</a></td>
+        {%- else -%}
+        <td class="p-1 pl-2 font-weight-light text">{{ resource.name }}</td>
+        {%- endif -%}
+      </tr>
+      {% endfor %}
+    {%- endif -%}
+    </table>    
+</div>

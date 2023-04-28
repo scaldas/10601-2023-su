@@ -1,0 +1,29 @@
+---
+layout: default
+---
+        <div class="post">
+
+          <header class="post-header">
+            <h3 class="post-title">{{ page.title }}</h3>
+            <p class="post-description">{{ page.description }}</p>
+          </header>
+
+          <article>
+            <div class="cv">
+              {%- if page.showing and page.showing == "lectures" %}
+                {% for entry in site.data.lectures %}
+                  <div class="card mt-3 p-3">
+                    {% include schedule/lecture.html %}
+                  </div>
+                {% endfor %}
+              {%- elsif page.showing and page.showing == "assignments" %}
+                {% for entry in site.data.assignments %}
+                  <div class="card mt-3 p-3">
+                    {% include schedule/assignment.html %}
+                  </div>
+                {% endfor %}
+              {%- endif %}
+              </div>
+          </article>
+
+        </div>

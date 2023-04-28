@@ -1,0 +1,20 @@
+- title: "Lecture 2: Decision Trees"
+  date: Mon, 5/16
+  slides: Lecture2.pdf
+  inked: Lecture2_Inked.pdf
+  resources:
+    - name: "Daumé III, Chapter 1: Decision Trees"
+      external_link: http://ciml.info/dl/v0_99/ciml-v0_99-ch01.pdf
+    - name: "Warm-up Handout"
+      local_link: Lecture3_Handout.pdf
+
+- title: "Lecture 1: Notation and Problem Formulation"
+  date: Tue, 5/17
+  slides: Lecture1.pdf
+  inked: Lecture1_Inked.pdf
+
+- title: "Logistics"
+  date: Mon, 5/16
+  slides: Logistics.pdf
+  inked: 
+
