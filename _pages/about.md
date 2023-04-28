@@ -9,8 +9,8 @@ news: true
 
 #### **Key Information and Links**
 
-- **Instructors:** {% for instructor in site.data.staff.Instructors %}[{{instructor.name}}]({{ instructor.email }}) \| {% endfor %}
-- **Education Associates:** {% for instructor in site.data.staff.EducationAssociates %}[{{instructor.name}}]({{ instructor.email }}) \| {% endfor %}
+- **Instructors:** {% for instructor in site.data.staff.Instructors %}[{{instructor.name}}](mailto:{{ instructor.email }}) \| {% endfor %}
+- **Education Associates:** {% for instructor in site.data.staff.EducationAssociates %}[{{instructor.name}}](mailto:{{ instructor.email }}) \| {% endfor %}
 - **Lectures:** Monday, Wednesday 12:30 AM - 1:50 PM in GHC 4215. 
 - **Recitations:** Friday 12:30 AM - 1:50 PM. Attendance at recitations is optional and therefore, outside of extraordinary circumstances, these will not be live-streamed or recorded. Recitation handouts can be found under the Recitations tab.
 - **Announcements / Q&A:** We will be using [Ed](https://piazza.com){:target="\_blank"} for making announcements and answering questions. 
