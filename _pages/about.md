@@ -7,7 +7,7 @@ logo: ml-logo.gif
 news: true
 ---
 
-#### **Key Information and Links**
+### Key Information and Links
 
 - **Instructors:** {% for instructor in site.data.staff.Instructors %}[{{instructor.name}}](mailto:{{ instructor.email }}) \| {% endfor %}
 - **Education Associates:** {% for instructor in site.data.staff.EducationAssociates %}[{{instructor.name}}](mailto:{{ instructor.email }}) \| {% endfor %}
